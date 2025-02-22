@@ -1,0 +1,138 @@
+/* General Page Style */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #cffacf; /* Light grass green */
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px; /* Space between screen frame and inner frames */
+    gap: 20px;
+}
+
+/* Left Column Section */
+.left-column {
+    width: 35%;  /* Left column is smaller */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Right Column Section */
+.right-column {
+    width: 60%;  /* Right column takes up more space */
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 100%;  /* Ensure both columns are the same height */
+}
+
+/* Frame Style */
+.frame {
+    background-color: white;
+    border-radius: 15px;
+    border: 2px solid black;
+    padding: 20px;
+}
+
+/* Title Style */
+.frame-title {
+    background-color: rgb(239, 232, 7);
+    color: black;
+    padding: 10px;
+    font-weight: bold;
+    border-radius: 12px;
+    width: fit-content;
+    margin-bottom: 10px;
+    border: 2px solid black;
+}
+
+/* Name Frame Style */
+.name-frame h1 {
+    font-family: 'Pacifico', cursive; /* New font */
+    font-size: 3.5em;  /* Increased size */
+    color: purple;     /* Changed to purple */
+    text-align: center;
+    margin: 0;
+}
+
+/* Specific Frames */
+.photo-frame {
+    width: 100%;
+    height: 300px; /* Made the image frame taller */
+    border-radius: 15px;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.photo-frame img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Contact Info Style */
+.contact-info-frame ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.contact-info-frame li {
+    margin: 10px 0;
+}
+
+/* Project Style */
+.projects-frame {
+    width: 100%;
+}
+
+.project {
+    margin-bottom: 20px;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left-column, .right-column {
+        width: 90%;
+    }
+
+    .name-frame h1 {
+        font-size: 2.5em;
+    }
+}
+
+@media (max-width: 768px) {
+    .frame {
+        width: 100%;
+        padding: 15px;
+    }
+    .photo-frame {
+        width: 100%;
+        height: 250px;
+    }
+    .name-frame h1 {
+        font-size: 2.2em;
+    }
+}
+
+@media (max-width: 576px) {
+    .frame {
+        width: 100%;
+        padding: 10px;
+    }
+    .photo-frame {
+        width: 100%;
+        height: 200px;
+    }
+    .name-frame h1 {
+        font-size: 1.8em;
+    }
+}
